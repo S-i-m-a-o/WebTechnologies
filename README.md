@@ -1,9 +1,128 @@
-This project is a backend system for an event invitation application built using Node.js, Express, and MongoDB. It allows users to register, log in, create and manage events, invite other users, and interact through comments on events. The system uses session-based authentication to manage user login state and bcrypt is used to securely hash passwords before storing them in the database. Users are assigned roles which help control access to certain features such as creating events or managing content. The database is structured using MongoDB with Mongoose schemas for users, events, comments, and invitations, where relationships are created using ObjectId references.
+# INVITY - Event Management Platform
 
-All API endpoints were developed following REST principles and include full CRUD functionality where appropriate. Authentication middleware is used to protect routes and ensure that only logged-in users can access certain features. Additional validation and error handling have been implemented on the server side to ensure data integrity and provide meaningful responses.
+## Overview
 
-The API was thoroughly tested using Bruno, which was used to simulate client requests and verify the functionality of each endpoint. This included testing user authentication, event creation and retrieval, comment operations. Overall, the project demonstrates a fully functional and secure backend system for managing events and user interactions.
+INVITY is a full-stack event management platform developed using React, Node.js, Express, MongoDB, and Vite.
 
-All work was distributed and completed evenly by all members of the group.
+The application allows users to register, log in, create events, manage invitations, and interact with other users through a modern web interface.
 
-Bernardo, Gustavo, Igor, Guilherme and Thomas.
+---
+
+## Technologies Used
+
+### Frontend
+- React
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
+### Authentication
+- bcrypt
+- express-session
+- connect-mongo
+
+---
+
+## Features
+
+- User Registration
+- User Login
+- Session Authentication
+- Protected Routes
+- Event Creation
+- Event Management
+- Invitation System
+- Comments System
+- Responsive Design
+
+---
+
+## Screenshots
+
+### Home Page
+
+![Home](Screenshots/home-page.png)
+
+### Login Page
+
+![Login](Screenshots/login-page.png)
+
+### Register Page
+
+![Register](Screenshots/register-page.png)
+
+### Create Event Page
+
+![Create Event](Screenshots/create-event-page.png)
+
+---
+
+## Project Structure
+
+```text
+api/
+frontend/
+Screenshots/
+README.md
+```
+
+---
+
+## Team Contribution
+
+### Guilherme Simão
+
+- Authentication system implementation
+- Session management
+- Password hashing with bcrypt
+- Protected routes middleware
+- User registration and login
+- CRUD operations
+- API testing using Thunder Client
+- Project documentation
+
+---
+
+## Installation
+
+### Backend
+
+```bash
+cd api
+npm install
+npm start
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## Environment Variables
+
+Create:
+
+### api/.env
+
+```env
+MONGO_URI=your_mongodb_connection_string
+SESSION_SECRET=your_session_secret
+PORT=9000
+```
+
+### frontend/.env
+
+```env
+VITE_REACT_APP_API_URL=http://localhost:9000
+```
